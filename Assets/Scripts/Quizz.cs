@@ -25,18 +25,19 @@ public class Quizz : MonoBehaviour
 
     public void OnAnswerSelected(int index)
     {
-        if(index == question.GetCorrectAnswerIndex())
+        Image buttonImage;
+
+        if (index == question.GetCorrectAnswerIndex())
         {
             questionText.text = "Correct!";
-            Image buttonImage = answerButtons[index].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
+            buttonImage = answerButtons[index].GetComponent<Image>();
         }
         else
         {
             int correctAnswerIndex = question.GetCorrectAnswerIndex();
-            questionText.text = "Eh no babz, la bonne réponse est: " + question.GetAnswer(correctAnswerIndex);
-            Image buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
+            questionText.text = "Babuino, the correct answer is: " + question.GetAnswer(correctAnswerIndex);
+            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
         }
+        buttonImage.sprite = correctAnswerSprite;
     }
 }

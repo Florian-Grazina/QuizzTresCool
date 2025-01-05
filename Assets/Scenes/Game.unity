@@ -678,8 +678,8 @@ MonoBehaviour:
   - {fileID: 1478263056}
   - {fileID: 1717996369}
   - {fileID: 1449555267}
-  defaultAnswerSprite: {fileID: 0}
-  correctAnswerSprite: {fileID: 0}
+  defaultAnswerSprite: {fileID: -2421234149185767044, guid: d0b0fceb7cac97c4a8ec429ee66f1ac9, type: 3}
+  correctAnswerSprite: {fileID: -4659264650518790821, guid: f938412f970091f45a91efe3b0362b1d, type: 3}
 --- !u!1 &1436729867
 GameObject:
   m_ObjectHideFlags: 0
