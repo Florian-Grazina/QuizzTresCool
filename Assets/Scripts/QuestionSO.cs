@@ -7,4 +7,5 @@ public class QuestionSO : ScriptableObject
     [TextArea(2, 6)]
     [SerializeField] protected string question = "Enter new question text here";
 
+    public string GetQuestion() => question;
 }
