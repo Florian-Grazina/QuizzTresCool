@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   question: Quel est le taux d'alcool d'une Heineken
+  answers:
+  - 4,2%
+  - 4,6%
+  - 5,0%
+  - 5,4%
+  correctAnswerIndex: 2

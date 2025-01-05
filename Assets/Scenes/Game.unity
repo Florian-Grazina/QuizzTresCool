@@ -1511,6 +1511,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 324965711}
     m_Modifications:
     - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -1522,6 +1526,26 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417279087634833781, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_RaycastPadding.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4105159622472948801, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_fontSize
       value: 40
@@ -1529,6 +1553,10 @@ PrefabInstance:
     - target: {fileID: 4105159622472948801, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_fontSizeBase
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367918193264382697, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7393628673968811133, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_Name
@@ -1565,6 +1593,10 @@ PrefabInstance:
     - target: {fileID: 9128709207014100695, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128709207014100695, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9128709207014100695, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1612,6 +1644,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9128709207014100695, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128709207014100695, guid: d4be7affc59bfab46b73c4ff52bc3a3b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
