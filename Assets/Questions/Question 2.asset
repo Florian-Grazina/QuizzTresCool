@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ea9eded995e3b47a5684574b1007bd, type: 3}
   m_Name: Question 2
   m_EditorClassIdentifier: 
-  question: Quel est le taux d'alcool d'une Jupiler
+  question: Quel est le taux d'alcool d'une Jupiler?
+  answers:
+  - 
+  - 
+  - 
+  - 
+  correctAnswerIndex: 0
