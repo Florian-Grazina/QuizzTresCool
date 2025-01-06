@@ -14,15 +14,10 @@ public class Quizz : MonoBehaviour
 
     protected void Start()
     {
-        questionText.text = question.GetQuestion();
-
-        for (int i = 0; i < answerButtons.Length; i++)
-        {
-            TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = question.GetAnswer(i);
-        }
+        DisplayQuestions();
     }
 
+    #region public methods
     public void OnAnswerSelected(int index)
     {
         Image buttonImage;
@@ -40,4 +35,18 @@ public class Quizz : MonoBehaviour
         }
         buttonImage.sprite = correctAnswerSprite;
     }
+    #endregion
+
+    #region private methods
+    private void DisplayQuestions()
+    {
+        questionText.text = question.GetQuestion();
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = question.GetAnswer(i);
+        }
+    }
+    #endregion
 }
