@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] protected float timeToAnswerquestion = 30f;
+    [SerializeField] protected float timeToShowCorrectAnswer = 10f;
+
+    public bool IsAnsweringQuestion = false;
+
+    protected float timerValue;
+
+    protected void Update()
     {
-        
+        UpdateTimer();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateTimer()
     {
-        
+        timerValue -= Time.deltaTime;
+
+        if(timerValue <= 0)
+        {
+            IsAnsweringQuestion = !IsAnsweringQuestion;
+            timerValue = IsAnsweringQuestion ? timeToAnswerquestion : timeToShowCorrectAnswer;
+        }
     }
 }
