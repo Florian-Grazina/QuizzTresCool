@@ -33,7 +33,7 @@ public class Quizz : MonoBehaviour
             questionText.text = "Babuino, the correct answer is: " + question.GetAnswer(correctAnswerIndex);
             buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
         }
-        
+
         SetButtonState(false);
         buttonImage.sprite = correctAnswerSprite;
     }
@@ -43,6 +43,7 @@ public class Quizz : MonoBehaviour
     private void GetNextQuestion()
     {
         SetButtonState(true);
+        SetDefaultButtonSprite();
         DisplayQuestions();
     }
 
@@ -61,6 +62,15 @@ public class Quizz : MonoBehaviour
     {
         foreach (GameObject button in answerButtons)
             button.GetComponent<Button>().interactable = state;
+    }
+
+    private void SetDefaultButtonSprite()
+    {
+        foreach (GameObject button in answerButtons)
+        {
+            Image buttonImage = button.GetComponent<Image>();
+            buttonImage.sprite = defaultAnswerSprite;
+        }
     }
     #endregion
 }
