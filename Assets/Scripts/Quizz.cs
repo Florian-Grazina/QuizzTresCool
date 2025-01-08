@@ -18,9 +18,16 @@ public class Quizz : MonoBehaviour
     [Header("Timer")]
     [SerializeField] protected Image timerImage;
     protected Timer timer;
+
     protected void Start()
     {
+        timer = FindFirstObjectByType<Timer>();
         DisplayQuestions();
+    }
+
+    protected void Update()
+    {
+        timerImage.fillAmount = timer.fillFraction;
     }
 
     #region public methods
