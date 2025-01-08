@@ -11,6 +11,7 @@ public class Quizz : MonoBehaviour
     [Header("Answers")]
     [SerializeField] protected GameObject[] answerButtons;
     protected int correctAnswerIndex;
+    bool hasAnswered;
 
     [SerializeField] protected Sprite defaultAnswerSprite;
     [SerializeField] protected Sprite correctAnswerSprite;
@@ -28,10 +29,39 @@ public class Quizz : MonoBehaviour
     protected void Update()
     {
         timerImage.fillAmount = timer.fillFraction;
+
+        if(timer.loadNextQuestion)
+        {
+            hasAnswered = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        }
+        else if(!hasAnswered && !timer.IsAnsweringQuestion)
+        {
+            DisplayAnswer(-1);
+            SetButtonState(false);
+        }
     }
 
     #region public methods
     public void OnAnswerSelected(int index)
+    {
+        hasAnswered = true;
+        DisplayAnswer(index);
+        SetButtonState(false);
+        timer.CancelTimer();
+    }
+    #endregion
+
+    #region private methods
+    private void GetNextQuestion()
+    {
+        SetButtonState(true);
+        SetDefaultButtonSprite();
+        DisplayQuestions();
+    }
+
+    private void DisplayAnswer(int index)
     {
         Image buttonImage;
 
@@ -46,18 +76,7 @@ public class Quizz : MonoBehaviour
             questionText.text = "Babuino, the correct answer is: " + question.GetAnswer(correctAnswerIndex);
             buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
         }
-
-        SetButtonState(false);
         buttonImage.sprite = correctAnswerSprite;
-    }
-    #endregion
-
-    #region private methods
-    private void GetNextQuestion()
-    {
-        SetButtonState(true);
-        SetDefaultButtonSprite();
-        DisplayQuestions();
     }
 
     private void DisplayQuestions()

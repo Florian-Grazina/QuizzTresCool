@@ -5,7 +5,7 @@ public class Timer : MonoBehaviour
     [SerializeField] protected float timeToAnswerquestion = 30f;
     [SerializeField] protected float timeToShowCorrectAnswer = 10f;
 
-    public bool loadNextQuestion;
+    public bool loadNextQuestion = false;
 
     public bool IsAnsweringQuestion = false;
     public float fillFraction;
@@ -50,8 +50,6 @@ public class Timer : MonoBehaviour
                 timerValue = timeToAnswerquestion;
                 loadNextQuestion = true;
             }
-
-            Debug.Log(IsAnsweringQuestion + " / Timer: " + timerValue + " / Timer: " + fillFraction);
         }
     }
 }
