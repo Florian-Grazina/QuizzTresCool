@@ -4,14 +4,20 @@ using UnityEngine.UI;
 
 public class Quizz : MonoBehaviour
 {
+    [Header("Questions")]
     [SerializeField] protected TextMeshProUGUI questionText;
     [SerializeField] protected QuestionSO question;
-    [SerializeField] protected GameObject[] answerButtons;
 
+    [Header("Answers")]
+    [SerializeField] protected GameObject[] answerButtons;
     protected int correctAnswerIndex;
+
     [SerializeField] protected Sprite defaultAnswerSprite;
     [SerializeField] protected Sprite correctAnswerSprite;
 
+    [Header("Timer")]
+    [SerializeField] protected Image timerImage;
+    protected Timer timer;
     protected void Start()
     {
         DisplayQuestions();
