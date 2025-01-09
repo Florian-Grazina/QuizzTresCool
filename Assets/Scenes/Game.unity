@@ -395,7 +395,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -107.02176, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -691,6 +691,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1059456687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059456689}
+  - component: {fileID: 1059456688}
+  m_Layer: 0
+  m_Name: ScoreKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1059456688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059456687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e30aada892f0b4a934e23e52434fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1059456689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059456687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1041.474, y: 529.1069, z: -6.033002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154286312
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +868,7 @@ MonoBehaviour:
   defaultAnswerSprite: {fileID: -2421234149185767044, guid: d0b0fceb7cac97c4a8ec429ee66f1ac9, type: 3}
   correctAnswerSprite: {fileID: -4659264650518790821, guid: f938412f970091f45a91efe3b0362b1d, type: 3}
   timerImage: {fileID: 1788819157}
+  scoreText: {fileID: 182327242}
 --- !u!1 &1436729867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,7 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToAnswerquestion: 10
   timeToShowCorrectAnswer: 5
-  loadNextQuestion: 1
+  loadNextQuestion: 0
   IsAnsweringQuestion: 0
   fillFraction: 0
 --- !u!4 &1684619153
@@ -1925,3 +1970,4 @@ SceneRoots:
   - {fileID: 1436729871}
   - {fileID: 1154286316}
   - {fileID: 1684619153}
+  - {fileID: 1059456689}

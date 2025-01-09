@@ -65,6 +65,8 @@ public class Quizz : MonoBehaviour
     {
         if(questions.Count > 0)
         {
+            Debug.Log("Getting next question");
+
             SetButtonState(true);
             SetDefaultButtonSprite();
             GetRandomQuestion();
@@ -84,6 +86,9 @@ public class Quizz : MonoBehaviour
 
     private void DisplayAnswer(int index)
     {
+        if (currentQuestion == null)
+            return;
+
         Image buttonImage;
 
         if (index == currentQuestion.GetCorrectAnswerIndex())
