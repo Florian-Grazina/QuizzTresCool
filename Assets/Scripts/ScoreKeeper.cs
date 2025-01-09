@@ -5,13 +5,14 @@ public class ScoreKeeper : MonoBehaviour
     protected int correctAnswers = 0;
     protected int questionsSeen = 0;
 
-    protected void Start()
-    {
-        
-    }
+    public int GetCorrectAnswers() => correctAnswers;
+    public void IncrementCorrectAnswers() => correctAnswers++;
 
-    protected void Update()
+    public int GetQuestionsSeen() => questionsSeen;
+    public void IncrementQuestionsSeen() => questionsSeen++;
+
+    public int GetScore()
     {
-        
+        return Mathf.RoundToInt(correctAnswers / (float)questionsSeen * 100);
     }
 }
