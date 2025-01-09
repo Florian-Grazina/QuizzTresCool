@@ -57,10 +57,13 @@ public class Quizz : MonoBehaviour
     #region private methods
     private void GetNextQuestion()
     {
-        SetButtonState(true);
-        SetDefaultButtonSprite();
-        GetRandomQuestion();
-        DisplayQuestions();
+        if(questions.Count > 0)
+        {
+            SetButtonState(true);
+            SetDefaultButtonSprite();
+            GetRandomQuestion();
+            DisplayQuestions();
+        }
     }
 
     private void GetRandomQuestion()

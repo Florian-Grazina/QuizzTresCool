@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ea9eded995e3b47a5684574b1007bd, type: 3}
   m_Name: Question 4
   m_EditorClassIdentifier: 
-  question: What is the alcohol content of a Leffe?
+  question: What is the alcohol content of a Leffe blonde?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - 6,1 %
+  - 6.6 %
+  - 7,1 %
+  - 7,6 %
+  correctAnswerIndex: 1

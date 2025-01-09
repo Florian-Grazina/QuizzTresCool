@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "What is the alcohol content of a Jupiler?\r"
   answers:
-  - 
-  - 
-  - 
-  - 
+  - 4,0 %
+  - 4,3 %
+  - 4,6 %
+  - 4,9 %
   correctAnswerIndex: 0

@@ -673,7 +673,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 2078882112}
-  question: {fileID: 11400000, guid: 31cbe78a18302a74ba23a32e085c19a2, type: 2}
+  questions:
+  - {fileID: 11400000, guid: 31cbe78a18302a74ba23a32e085c19a2, type: 2}
+  - {fileID: 11400000, guid: 14808ba8146ddcd4cbb58100562dcad7, type: 2}
+  - {fileID: 11400000, guid: 376c8f9f0c192f74b8d6eb4ae55541c3, type: 2}
+  - {fileID: 11400000, guid: 33db061aebe96c54fa4f61ff5a7eb708, type: 2}
+  - {fileID: 11400000, guid: e870c175d6b88ae4aa90316602b68ca1, type: 2}
   answerButtons:
   - {fileID: 2090653941}
   - {fileID: 1478263056}
@@ -1196,7 +1201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToAnswerquestion: 10
   timeToShowCorrectAnswer: 5
-  loadNextQuestion: 0
+  loadNextQuestion: 1
   IsAnsweringQuestion: 0
   fillFraction: 0
 --- !u!4 &1684619153

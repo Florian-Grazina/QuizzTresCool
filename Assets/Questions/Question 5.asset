@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: What is the alcohol content of a Kronembourg?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - 4,0 %
+  - 4,2 %
+  - 4,4 %
+  - 4,6 %
+  correctAnswerIndex: 1

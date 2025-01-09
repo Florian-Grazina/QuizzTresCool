@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: What is the alcohol content of a Chouffe?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - 7,0 %
+  - 7,5 %
+  - 8,0 %
+  - 8,5 %
+  correctAnswerIndex: 2
