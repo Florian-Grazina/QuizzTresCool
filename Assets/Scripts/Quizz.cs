@@ -26,6 +26,8 @@ public class Quizz : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI scoreText;
     protected ScoreKeeper scoreKeeper;
 
+    
+
     protected void Start()
     {
         timer = FindFirstObjectByType<Timer>();
