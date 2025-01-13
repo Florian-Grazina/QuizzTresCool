@@ -1056,6 +1056,8 @@ MonoBehaviour:
   correctAnswerSprite: {fileID: -4659264650518790821, guid: f938412f970091f45a91efe3b0362b1d, type: 3}
   timerImage: {fileID: 1788819157}
   scoreText: {fileID: 182327242}
+  progressBar: {fileID: 2070818632}
+  isComplete: 0
 --- !u!1 &1195432715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,7 +2013,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 523598180}
   m_FillRect: {fileID: 1694753958}
   m_HandleRect: {fileID: 523598179}
