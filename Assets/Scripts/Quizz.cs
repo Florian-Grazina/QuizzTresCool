@@ -13,7 +13,7 @@ public class Quizz : MonoBehaviour
     [Header("Answers")]
     [SerializeField] protected GameObject[] answerButtons;
     protected int correctAnswerIndex;
-    bool hasAnswered;
+    bool hasAnswered = true;
 
     [SerializeField] protected Sprite defaultAnswerSprite;
     [SerializeField] protected Sprite correctAnswerSprite;
@@ -28,10 +28,10 @@ public class Quizz : MonoBehaviour
 
     [Header("ProgessBar")]
     [SerializeField] protected Slider progressBar;
-    
+
     public bool isComplete;
 
-    protected void Start()
+    protected void Awake()
     {
         timer = FindFirstObjectByType<Timer>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
@@ -43,13 +43,19 @@ public class Quizz : MonoBehaviour
     {
         timerImage.fillAmount = timer.fillFraction;
 
-        if(timer.loadNextQuestion)
+        if (timer.loadNextQuestion)
         {
+            if (progressBar.value == progressBar.maxValue)
+            {
+                isComplete = true;
+                return;
+            }
+
             hasAnswered = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
         }
-        else if(!hasAnswered && !timer.IsAnsweringQuestion)
+        else if (!hasAnswered && !timer.IsAnsweringQuestion)
         {
             DisplayAnswer(-1);
             SetButtonState(false);
@@ -64,16 +70,13 @@ public class Quizz : MonoBehaviour
         SetButtonState(false);
         timer.CancelTimer();
         scoreText.text = "Score: " + scoreKeeper.GetScore() + "%";
-
-        if(progressBar.value == progressBar.maxValue)
-            isComplete = true;
     }
     #endregion
 
     #region private methods
     private void GetNextQuestion()
     {
-        if(questions.Count > 0)
+        if (questions.Count > 0)
         {
             Debug.Log("Getting next question");
 
@@ -91,7 +94,7 @@ public class Quizz : MonoBehaviour
         int index = Random.Range(0, questions.Count);
         currentQuestion = questions[index];
 
-        if(questions.Contains(currentQuestion))
+        if (questions.Contains(currentQuestion))
             questions.Remove(currentQuestion);
     }
 

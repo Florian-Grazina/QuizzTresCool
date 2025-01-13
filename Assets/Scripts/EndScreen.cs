@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class EndScreen : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI finalScoreAmount;
+    [SerializeField] protected TextMeshProUGUI finalScoreAmount;
     protected ScoreKeeper scoreKeeper;
 
-    protected void Start()
+    protected void Awake()
     {
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
     }

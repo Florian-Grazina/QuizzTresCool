@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 15001207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 15756820}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnReplayLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15001207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 15756819}
+  - component: {fileID: 15756820}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -271,6 +284,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &15756820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15756818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b79972d73d85343ab31e233d91537a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &89802708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -506,7 +531,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &178334116
 RectTransform:
@@ -542,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29acc19a1475e3d4a868bc35d9e5e096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalScoreAmount: {fileID: 0}
+  finalScoreAmount: {fileID: 1028689736}
 --- !u!1 &182327240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 80%
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d691d9f34233ec24b8658d93648dc475, type: 2}
   m_sharedMaterial: {fileID: -6936256016408260835, guid: d691d9f34233ec24b8658d93648dc475, type: 2}
